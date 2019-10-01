@@ -7,7 +7,7 @@ export default class FollowerDetails extends Component {
     render(){    
         const {login, avatar_url} = this.props.data    
         return(
-            <div className="App">
+            <div className="followersdetails">
                 <img src={avatar_url}/>
                 <h1>{login}</h1>
             </div>

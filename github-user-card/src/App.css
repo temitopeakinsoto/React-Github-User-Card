@@ -1,22 +1,33 @@
-.App {
-  text-align: center;
+
+
+.userdetails{
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  background-color: skyblue;
+  margin-bottom: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
+.userdetails img{
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.followersdetails{
+  width: 80%;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #09d3ac;
+.followersdetails img {
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
 }
+
+
