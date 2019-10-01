@@ -18,7 +18,7 @@ export default class App extends React.Component {
   }
 
   componentDidMount(){
-    // axios.get("https://api.github.com/users/mpereannor")
+    // axios.get("https://api.github.com/users/temitopeakinsoto")
     // .then(response => {
     //   this.setState({ userInfo: response.data })
     // })
