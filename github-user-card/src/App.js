@@ -1,13 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import UserDetails from './Components/User';
 
-function App() {
-  return (
-    <div className="App">
-     <p>Welcome to Git Hub User Card</p>
-    </div>
-  );
+export default class App extends React.Component {
+
+  constructor(props){
+    super(props);
+
+    this.state= {
+      userInfo: {}
+    }
+  }
+
+  componentDidMount(){
+ 
+  }
+
+  render(){
+    return (
+      <div className="App">
+       <UserDetails /> 
+      </div>
+    );
+  }  
 }
-
-export default App;
