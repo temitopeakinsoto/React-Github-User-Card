@@ -15,7 +15,8 @@ export default class App extends React.Component {
     super(props);
 
     this.state= {
-      userInfo: {}
+      userInfo: {},
+      followersArray: []
     }
   }
 
@@ -23,17 +24,22 @@ export default class App extends React.Component {
     axios.get("https://api.github.com/users/temitopeakinsoto")
     .then(response => {
       this.setState({ userInfo: response.data })
-    })
-    .catch(error => {
+    }).catch(error => {
       console.log(error.data)
     }); 
+
+    axios.get("https://api.github.com/users/temitopeakinsoto/followers")
+    .then(response => {
+      this.setState({ followersArray: response.data })
+    })
+    .catch()
   }
 
   render(){
     return (      
       <div className="App">
        <UserDetails data={this.state.userInfo}/>
-       <FollowerList followers={this.state.userInfo.following_url}/>
+       <FollowerList followers={this.state.followersArray}/>
       </div>
     );
   }  
