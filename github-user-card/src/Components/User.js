@@ -6,9 +6,11 @@ export default class UserDetails extends Component {
     }
 
     render(){
+        const {name, sex} = this.props.data;
         return(
             <div className="App">
-                <p>hello world</p>
+                <h1>{`Hello my name is ${name}`}</h1>
+                <p>{`I am a ${sex}`}</p>
             </div>
         )
     }

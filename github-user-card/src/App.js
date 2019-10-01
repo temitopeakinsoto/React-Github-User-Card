@@ -1,5 +1,11 @@
 import React from 'react';
 import UserDetails from './Components/User';
+// import axios from "axios";
+
+const staticData = {
+  name: "Temitope Akinsoto",
+  sex: "male"
+}
 
 export default class App extends React.Component {
 
@@ -12,13 +18,19 @@ export default class App extends React.Component {
   }
 
   componentDidMount(){
+    // axios.get("https://api.github.com/users/mpereannor")
+    // .then(response => {
+    //   this.setState({ userInfo: response.data })
+    // })
+    // .catch()
  
   }
 
   render(){
-    return (
+    console.log('data is', this.userInfo);
+    return (      
       <div className="App">
-       <UserDetails /> 
+       <UserDetails data={staticData}/> 
       </div>
     );
   }  
