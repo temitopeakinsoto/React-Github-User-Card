@@ -2,15 +2,9 @@ import React from 'react';
 import UserDetails from './Components/UserDetails';
 import FollowerList from './Components/FollowerList';
 import axios from "axios";
-// import axios from "axios";
-
-const staticData = {
-  name: "Temitope Akinsoto",
-  sex: "male"
-}
 
 export default class App extends React.Component {
-
+  
   constructor(props){
     super(props);
 
