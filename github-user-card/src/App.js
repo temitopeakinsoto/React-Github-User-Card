@@ -1,5 +1,5 @@
 import React from 'react';
-import UserDetails from './Components/User';
+import UserDetails from './Components/UserDetails';
 import FollowerList from './Components/FollowerList';
 
 // import axios from "axios";
@@ -33,7 +33,7 @@ export default class App extends React.Component {
     return (      
       <div className="App">
        <UserDetails data={staticData}/>
-       <FollowerList />
+       <FollowerList data={staticData}/>
       </div>
     );
   }  

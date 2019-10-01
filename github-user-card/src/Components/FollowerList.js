@@ -1,5 +1,5 @@
 import React from 'react';
-import FollowerDetails from './Follower';
+import FollowerDetails from './FollowerDetails';
 
 // import axios from "axios";
 
@@ -12,6 +12,11 @@ name:"Tamilor yetunde",
 sex: "female"
 }
 ]
+
+const staticData = {
+    name: "Alex Akin",
+    sex: "male"
+}
 
 export default class FollowerList extends React.Component {
 
@@ -36,8 +41,7 @@ export default class FollowerList extends React.Component {
     console.log('data is', this.userInfo);
     return (      
       <div className="App">
-      <p>Hllo</p>
-       {/* <FollowerDetails data={staticData}/>  */}
+        <FollowerDetails data={staticData}/> 
       </div>
     );
   }  
