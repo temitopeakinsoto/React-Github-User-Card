@@ -23,13 +23,16 @@ export default class FollowerList extends React.Component {
   constructor(props){
     super(props);
 
-    this.state= {
-      followerInfoArray: []
-    }
+    // this.state= {
+    //   followerInfoArray: []
+    // }  
+    
   }
+  
 
-  componentDidMount(){
-    // axios.get("https://api.github.com/users/temitopeakinsoto/followers")
+  componentDidMount(){    
+    
+    // axios.get(`https://api.github.com/users/temitopeakinsoto/${followers_url}`)
     // .then(response => {
     //   this.setState({ followerInfoArray: response.data })
     // })
@@ -38,10 +41,11 @@ export default class FollowerList extends React.Component {
   }
 
   render(){
-    console.log('data is', this.userInfo);
+    console.log('followers me is', this.props.followers);
     return (      
       <div className="App">
-        <FollowerDetails data={staticData}/> 
+      {staticFollowerData.map((eachFollower) => <FollowerDetails data={eachFollower}/>)}
+        {/* <FollowerDetails data={staticData}/>  */}
       </div>
     );
   }  

@@ -6,11 +6,13 @@ export default class UserDetails extends Component {
     }
 
     render(){
-        const {name, sex} = this.props.data;
+        const {name, login, avatar_url, public_repos} = this.props.data;
         return(
             <div className="App">
-                <h1>{`Hello my name is ${name}`}</h1>
-                <p>{`I am a ${sex}`}</p>
+                <h1>{`Name: ${name}`}</h1>
+                <p>{`Username: ${login}`}</p>
+                <p>{`Repositories: ${public_repos}`}</p>
+                <img src={avatar_url}/>
             </div>
         )
     }

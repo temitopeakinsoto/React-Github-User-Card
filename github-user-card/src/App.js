@@ -1,7 +1,7 @@
 import React from 'react';
 import UserDetails from './Components/UserDetails';
 import FollowerList from './Components/FollowerList';
-
+import axios from "axios";
 // import axios from "axios";
 
 const staticData = {
@@ -20,20 +20,20 @@ export default class App extends React.Component {
   }
 
   componentDidMount(){
-    // axios.get("https://api.github.com/users/temitopeakinsoto")
-    // .then(response => {
-    //   this.setState({ userInfo: response.data })
-    // })
-    // .catch()
- 
+    axios.get("https://api.github.com/users/temitopeakinsoto")
+    .then(response => {
+      this.setState({ userInfo: response.data })
+    })
+    .catch(error => {
+      console.log(error.data)
+    }); 
   }
 
   render(){
-    console.log('data is', this.userInfo);
     return (      
       <div className="App">
-       <UserDetails data={staticData}/>
-       <FollowerList data={staticData}/>
+       <UserDetails data={this.state.userInfo}/>
+       <FollowerList followers={this.state.userInfo.following_url}/>
       </div>
     );
   }  
